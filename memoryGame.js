@@ -46,7 +46,7 @@ function main(numberOfCards)
 		var numberToMove;
 		for (var i = 0; i < n; i++)
 		{
-			randomNumber = Math.floor((Math.random() * (2 * n - 1)) + 0); // random number from 0 to 19
+			randomNumber = Math.floor((Math.random() * (2 * n)) + 0); 
 			numberToMove = table[randomNumber];
 			table[randomNumber] = table[i];
 			table[i] = numberToMove;

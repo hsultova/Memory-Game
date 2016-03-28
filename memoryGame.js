@@ -53,5 +53,3 @@ function main(numberOfCards)
 		}
 	}
 }
-
-main(36); // square even number

@@ -8,6 +8,14 @@
 		<script src="memoryGame.js" type="text/javascript"></script>
 	</head>
 	<body onload="main(36)">	
-		<div id="table"></div>			
+		<div id="table"></div>	
+			
+		<script type="text/javascript">
+		function replaceValueInCell(id)
+		{
+			document.getElementById(id).innerHTML=table[id];
+			setTimeout(function(){document.getElementById(id).innerHTML=backCard}, 1000);
+		}
+		</script>
 	</body>
 </html>

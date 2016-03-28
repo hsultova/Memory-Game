@@ -1,10 +1,12 @@
 function main(numberOfCards)
 {
-	var table = [];
+	table = [];
+	backCard = '******<br>******<br>******';
+	
 	var outputTable;
 	var n = numberOfCards / 2; // Number of unique cards
 	var step = Math.sqrt(numberOfCards);
-	
+		
 	fillTable(n);
 	
 	for (var i = 0; i < 10; i++)
@@ -24,7 +26,7 @@ function main(numberOfCards)
 			outputTable += '<tr>';
 			for (var col = 0; col < step; col++)
 			{
-				outputTable += '<td>' + table[row + col] + '</td>';
+				outputTable += '<td id="' + (row + col) + '" onclick="replaceValueInCell(this.id)">' + backCard + '</td>'; // table[row + col]
 			}
 			outputTable += '</tr>';
 		}

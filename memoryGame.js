@@ -2,11 +2,12 @@ function main(numberOfCards)
 {
 	table = [];
 	backCard = '******<br>******<br>******';
+	countClickedCards = 0;
 	
 	var outputTable;
 	var n = numberOfCards / 2; // Number of unique cards
 	var step = Math.sqrt(numberOfCards);
-		
+	
 	fillTable(n);
 	
 	for (var i = 0; i < 10; i++)

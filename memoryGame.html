@@ -11,10 +11,49 @@
 		<div id="table"></div>	
 			
 		<script type="text/javascript">
+		var previousId;
+		var inactiveIds = [];
+		
 		function replaceValueInCell(id)
 		{
 			document.getElementById(id).innerHTML=table[id];
-			setTimeout(function(){document.getElementById(id).innerHTML=backCard}, 1000);
+			if(inactiveIds.indexOf(id) === -1)
+			{
+				if(countClickedCards === 0)
+				{
+					countClickedCards++;
+					previousId=id;
+				}
+				else
+				{
+					document.getElementById(previousId).innerHTML=table[previousId];
+				
+					countClickedCards++;
+					checkCards(previousId,id);
+				
+				}
+			}
+
+			//setTimeout(function(){document.getElementById(id).innerHTML=backCard}, 1000);
+		}
+		
+		function checkCards(previousId, id)
+		{
+			if(previousId !== id)
+			{
+				if(countClickedCards > 0 && table[previousId] !== table[id])
+				{
+					document.getElementById(previousId).innerHTML=backCard;
+					document.getElementById(id).innerHTML=backCard;				
+				}
+				else	
+				{
+					inactiveIds.push(previousId);
+					inactiveIds.push(id);
+				}
+				
+				countClickedCards=0;
+			}
 		}
 		</script>
 	</body>

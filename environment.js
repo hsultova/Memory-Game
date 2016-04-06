@@ -130,6 +130,5 @@ function main(numberOfCards)
 			table[randomNumber] = table[i];
 			table[i] = numberToMove;
 		}
-	}
-	
+	}	
 }

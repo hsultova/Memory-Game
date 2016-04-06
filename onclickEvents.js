@@ -19,8 +19,7 @@ function replaceValueInCellOnclick(id)
 				document.getElementById(previousId).innerHTML=table[previousId];
 			
 				countClickedCards++;
-				checkCards(previousId,id);
-			
+				checkCards(previousId,id);			
 			}
 		}
 	}
@@ -33,11 +32,9 @@ function checkCards(previousId, id)
 	{
 		isPaused = true;
 		if(table[previousId] !== table[id])
-		{
-			
+		{			
 			setTimeout(function(){document.getElementById(previousId).innerHTML=backCard}, 300);
-			setTimeout(function(){document.getElementById(id).innerHTML=backCard}, 300);
-			
+			setTimeout(function(){document.getElementById(id).innerHTML=backCard}, 300);			
 		}
 		else	
 		{

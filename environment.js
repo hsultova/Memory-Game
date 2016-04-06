@@ -27,7 +27,7 @@ function main(numberOfCards)
 			outputTable += '<tr>';
 			for (var col = 0; col < step; col++)
 			{
-				outputTable += '<td id="' + (row + col) + '" onclick="replaceValueInCell(this.id)">' + backCard + '</td>'; // table[row + col]
+				outputTable += '<td id="' + (row + col) + '" onclick="replaceValueInCellOnclick(this.id)">' + backCard + '</td>'; // table[row + col]
 			}
 			outputTable += '</tr>';
 		}

@@ -35,8 +35,8 @@ function checkCards(previousId, id)
 		if(table[previousId] !== table[id])
 		{
 			
-			setTimeout(function(){document.getElementById(previousId).innerHTML=backCard}, 1000);
-			setTimeout(function(){document.getElementById(id).innerHTML=backCard}, 1000);
+			setTimeout(function(){document.getElementById(previousId).innerHTML=backCard}, 500);
+			setTimeout(function(){document.getElementById(id).innerHTML=backCard}, 500);
 			
 		}
 		else	
